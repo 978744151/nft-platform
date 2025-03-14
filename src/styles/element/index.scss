@@ -1,0 +1,33 @@
+// styles/element/index.scss
+// we can add this to custom namespace, default is 'el'
+@forward 'element-plus/theme-chalk/src/mixins/config.scss' with ($namespace: 'el'
+);
+
+:root {
+  --el-color-primary: #0065ff;
+  --el-color-warning: #ff8a00;
+  --el-color-danger: #f93a3a;
+  --form-width: 1000px;
+}
+
+// ...
+.el-dialog {
+  padding: 0;
+
+  &__header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #EBEEF5;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-family: 'Microsoft YaHei';
+    font-weight: Regular;
+    text-align: left;
+    color: #303133;
+  }
+
+  &__body {
+    padding: 15px 20px;
+  }
+}
