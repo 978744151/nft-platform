@@ -420,6 +420,7 @@ $disabled-bg-color: #f7f7f9; // 禁用背景颜色
 }
 .editor-main {
   height: calc(100vh - 60px);
+  // padding-top: 60px;
 }
 .ae-Editor {
   overflow: auto;
@@ -431,6 +432,10 @@ $disabled-bg-color: #f7f7f9; // 禁用背景颜色
   border-bottom: 1px solid #ddd;
   justify-content: space-between;
   align-items: center;
+  // position: fixed;
+  // z-index: 111111;
+  background-color: #fff;
+  width: 100%;
   &-title {
     font-size: 20px;
     color: var(--el-color-primary);

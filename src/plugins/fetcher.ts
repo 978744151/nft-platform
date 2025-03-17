@@ -91,6 +91,7 @@ let fetcher =  async ({
       const reponse = {data:{},status:0}
       reponse.data  = (await (axios as any)[method](url, config)).data
       reponse.status  = 0
+      console.log(reponse)
       return reponse
     } else if (data && data instanceof FormData) {
       config.headers = config.headers || {};
@@ -105,15 +106,16 @@ let fetcher =  async ({
       config.headers = config.headers || {};
       config.headers['Content-Type'] = 'application/json';
     }
-    const res = await (axios as any)[method](url, data, config)
-    console.log(res)
+    console.log(url, data, config)
+    const res = await axios.post(url, data, config)
+    console.log(res.data)
     
     if(!res.data.success){
       ElNotification.error(res.data.error)
     }else{
         res.data.status = 0
-        res.data.data = res.data
-      ElNotification.success('操作成功')
+        // res.data.data = res.data
+        ElNotification.success('操作成功')
     }
     
     if(!res.data){

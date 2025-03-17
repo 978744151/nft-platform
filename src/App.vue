@@ -39,7 +39,6 @@ try {
 <style lang="scss">
 .app-main {
   /* 50= navbar  50  */
-  height: calc(100vh - 83px);
   width: 100%;
   position: relative;
   overflow: hidden;
