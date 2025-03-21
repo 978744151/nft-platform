@@ -107,7 +107,7 @@ let fetcher =  async ({
       config.headers['Content-Type'] = 'application/json';
     }
     console.log(url, data, config)
-    const res = await axios.post(url, data, config)
+    const res = await axios[method](url, data, config)
     console.log(res.data)
     
     if(!res.data.success){
